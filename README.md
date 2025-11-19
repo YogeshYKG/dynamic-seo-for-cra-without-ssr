@@ -111,7 +111,7 @@ The server will run on the port specified in your .env file (default: http://loc
 
 This proxy pattern requires robust checks:
 
-✅ Caching: Highly recommended to cache SEO API responses (e.g., using Redis or an in-memory store) to minimize latency on every request.
-✅ Timeouts: Use short timeouts (1–2s) on API calls to prevent slow SEO services from blocking the HTML response.
-✅ Sanitization: Strict validation/sanitization of the returned HTML fragment is crucial to prevent XSS (only allow expected <title>, <meta>, <link> tags).
-✅ Monitoring: Log cache hit ratio, API latency, and error rates.
+✅ **Caching**: Highly recommended to cache SEO API responses (e.g., using Redis or an in-memory store) to minimize latency on every request.
+✅ **Timeouts**: Use short timeouts (1–2s) on API calls to prevent slow SEO services from blocking the HTML response.
+✅ **Sanitization**: Strict validation/sanitization of the returned HTML fragment is crucial to prevent XSS (only allow expected <title>, <meta>, <link> tags).
+✅ **Monitoring**: Log cache hit ratio, API latency, and error rates.
