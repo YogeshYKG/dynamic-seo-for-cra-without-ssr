@@ -78,6 +78,7 @@ app.get("*", async (req, res) => {
 app.listen(PORT, () => {
     console.log(`SEO + Sitemap Server running on port ${PORT}`);
 });
+```
 
 ## **Architecture Diagram (End-to-End Flow)**
 
@@ -85,17 +86,23 @@ app.listen(PORT, () => {
 You must have **Node.js** and **npm** installed.
 
 ### **Clone the repo**
+```
 git clone https://github.com/YogeshYKG/dynamic-seo-for-cra-without-ssr.git
-
+```
 ### **Install dependencies**
+```
 npm install
+```
 
 ### **Configure environment** variables: Create a file named .env in the root directory based on the provided .env.example.
+```
 cp .env.example .env
+```
 
 ### **Start the server**
+```
 npm start
-
+```
 
 
 The server will run on the port specified in your .env file (default: http://localhost:6010).
@@ -105,9 +112,6 @@ The server will run on the port specified in your .env file (default: http://loc
 This proxy pattern requires robust checks:
 
 ✅ Caching: Highly recommended to cache SEO API responses (e.g., using Redis or an in-memory store) to minimize latency on every request.
-
 ✅ Timeouts: Use short timeouts (1–2s) on API calls to prevent slow SEO services from blocking the HTML response.
-
 ✅ Sanitization: Strict validation/sanitization of the returned HTML fragment is crucial to prevent XSS (only allow expected <title>, <meta>, <link> tags).
-
 ✅ Monitoring: Log cache hit ratio, API latency, and error rates.
