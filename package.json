@@ -1,0 +1,24 @@
+{
+  "name": "dynamic-seo-for-cra-without-ssr",
+  "version": "1.0.0",
+  "description": "A lightweight Express proxy to inject dynamic SEO meta tags and sitemaps into a static CRA build.",
+  "main": "server-seo-sitemap.js",
+  "scripts": {
+    "start": "node server-seo-sitemap.js"
+  },
+  "keywords": [
+    "seo",
+    "react",
+    "cra",
+    "express",
+    "sitemap",
+    "proxy"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  }
+}
