@@ -25,7 +25,7 @@ We placed a small **Express.js proxy layer** in front of the static CRA build. T
 
 This visual summarizes the entire request flow for both static and dynamic content.
 
-
+Link: https://www.canva.com/design/DAG5Kb_Efyg/M9VsWHXBUmbCg3f2tXrqYw/view?utm_content=DAG5Kb_Efyg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h534dba131e
 
 *For the full explanation, code review, and implementation details, including performance metrics and security checks, see the complete case study:* **[Link to Your Full Dev.to / Hashnode Article Here]**
 
@@ -112,6 +112,9 @@ The server will run on the port specified in your .env file (default: http://loc
 This proxy pattern requires robust checks:
 
 ✅ **Caching**: Highly recommended to cache SEO API responses (e.g., using Redis or an in-memory store) to minimize latency on every request.
+
 ✅ **Timeouts**: Use short timeouts (1–2s) on API calls to prevent slow SEO services from blocking the HTML response.
+
 ✅ **Sanitization**: Strict validation/sanitization of the returned HTML fragment is crucial to prevent XSS (only allow expected <title>, <meta>, <link> tags).
+
 ✅ **Monitoring**: Log cache hit ratio, API latency, and error rates.
